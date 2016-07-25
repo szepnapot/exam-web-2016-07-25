@@ -1,8 +1,9 @@
 const domFunctions = (function(){
 
   function getInput(){
+    console.log(domElements.shift.value);
     return {
-      "shift" : domElements.shift.value || 0,
+      "shift" : domElements.shift.value,
       "text" : domElements.text.value
     }
   }
