@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hy</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href="jumbotron-narrow.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container text-center">
+     <div class="header clearfix">
+       <nav>
+         <ul class="nav nav-pills pull-right">
+           <li role="presentation"><a href="#">About</a></li>
+         </ul>
+       </nav>
+       <h3 class="text-muted text-left">Ceasar Cipher</h3>
+     </div>
+
+     <div class="jumbotron">
+       <h1>C. Decode</h1>
+       <p class="lead">Public API to decode Ceasar encoded text</p>
+     </div>
+       <div class="alert alert-danger hidden" role="alert">Invalid input!</div>
+       <div class="col-sm-offset-5 col-sm-2 loading hidden">
+         <img src="loading.gif">
+       </div>
+      <p class="output hide">Decoded text: <span class="decoded"></span></p>
+       <input type="number" min="-25" max="25" class="form-control shift" placeholder="Enter shift">
+       <textarea class="form-control encodedText" rows="3"></textarea>
+       <br>
+       <div class="col-sm-offset-5 col-sm-2">
+         <p><a class="btn btn-lg btn-success decodeButton" href="#" role="button">DECODE</a></p>
+       </div>
+
+
+   </div>
+   <footer class="footer text-center">
+     <p><a href="https://github.com/greenfox-velox/szepnapot">Peter Lodri</a></p>
+   </footer>
+
+  </body>
+  <script src="./scripts/makeRequest.js"></script>
+  <script src="./scripts/domElements.js"></script>
+  <script src="./scripts/domFunctions.js"></script>
+  <script src="./scripts/main.js"></script>
+</html>
