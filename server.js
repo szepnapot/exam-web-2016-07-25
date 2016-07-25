@@ -22,7 +22,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(compression({filter: shouldCompress}));
 
-app.get('/', controller.getHomePage);
 app.post('/decode', controller.decode)
 
 app.listen(port);

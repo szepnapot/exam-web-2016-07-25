@@ -34,19 +34,19 @@ describe('Decode tests', function() {
     assert.equal(ceasarCipher.decode(text, shift), text);
   });
 
-  it('can do ROT13', function() {
+  it('ROT13', function() {
     let shift = 13;
     let text = "Gb or be abg gb or, Gung vf gur dhrfgvba";
     assert.equal(ceasarCipher.decode(text, shift), "To be or not to be, That is the question");
   });
 
-  it('can do ROT25', function() {
+  it('ROT25', function() {
     let shift = 25;
     let text = "Sn ad nq mns sn ad, Sgzs hr sgd ptdrshnm";
     assert.equal(ceasarCipher.decode(text, shift), "To be or not to be, That is the question");
   });
 
-  it('can do ROT26 leaves text unchanged', function() {
+  it('ROT26 leaves text unchanged', function() {
     let shift = 26;
     let text = "To be or not to be, That is the question";
     assert.equal(ceasarCipher.decode(text, shift), text);

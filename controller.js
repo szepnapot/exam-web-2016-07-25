@@ -14,10 +14,6 @@ const controller = function(cipher){
     res.status(400).json(err);
   }
 
-  function index(req, res){
-    res.render('index.html');
-  };
-
   function decode(req, res){
     if ( Number(req.body.shift) > 25 ||
           Number(req.body.shift) < -25 ||
@@ -37,7 +33,6 @@ const controller = function(cipher){
   };
 
   return {
-    getHomePage: index,
     decode: decode
   }
 };

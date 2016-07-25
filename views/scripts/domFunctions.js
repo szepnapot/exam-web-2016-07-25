@@ -2,7 +2,7 @@ const domFunctions = (function(){
 
   function getInput(){
     return {
-      "shift" : domElements.shift.value,
+      "shift" : domElements.shift.value || 0,
       "text" : domElements.text.value
     }
   }
@@ -11,7 +11,8 @@ const domFunctions = (function(){
     domElements.loadingIcon.classList.toggle("hidden");
   }
 
-  function showAlert(){
+  function showAlert(error){
+    domElements.alertBox.textContent = '' + error;
     domElements.output.classList.add('hide');
     domElements.alertBox.classList.remove("hidden");
     setTimeout(function(){
@@ -27,7 +28,7 @@ const domFunctions = (function(){
   function showDecoded(err, cont) {
     loading();
     if (err || cont.status !== 'ok') {
-      showAlert();
+      showAlert(cont.error);
       return;
     }
     resetAndFillOutput(cont.text);

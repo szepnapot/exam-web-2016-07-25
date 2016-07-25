@@ -11,7 +11,7 @@ const ajax = (function() {
     xhr.onload = function() {
       if ( xhr.readyState === 4) {
         if ( xhr.status !== 200) {
-          cb(xhr.status, null);
+          cb(xhr.status, JSON.parse(xhr.responseText));
           return;
         }
         cb(null, JSON.parse(xhr.responseText));
